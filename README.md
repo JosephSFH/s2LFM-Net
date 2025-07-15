@@ -1,1 +1,13 @@
-# spectral-encoded-scanning-light-field-microscopy
+# s2LFM-Net
+
+# Overview
+
+# Soft Environment
+
+# Demo
+
+# Results
+
+# Citation
+
+# Correspondence
