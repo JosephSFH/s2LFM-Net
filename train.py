@@ -12,23 +12,24 @@ def parse_args():
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda:0')
-    parser.add_argument("--angin", type=int, default=14, help="input angle number")
-    parser.add_argument("--out_channels", type=int, default=8, help="output spectrum channels")
-    parser.add_argument("--datasize", type=int, default=72, help="spatial pixel size for each angle")
+    parser.add_argument("--angin", type=int, default=12, help="input angle number")
+    parser.add_argument("--out_channels", type=int, default=4, help="output spectrum channels")
+    parser.add_argument("--datasize", type=int, default=108, help="spatial pixel size for each angle")
 
     parser.add_argument('--model_name', type=str, default='s2LFMNet')
-    parser.add_argument('--trainset_dir', type=str, default='Dataset/trainset/simulation_8channels/Train/')
-    parser.add_argument('--testset_dir', type=str, default='Dataset/trainset/simulation_8channels/Validation/')
+    parser.add_argument('--trainset_dir', type=str, default='')
+    parser.add_argument('--testset_dir', type=str, default='')
 
     parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--lr', type=float, default=1e-4, help='initial learning rate')
-    parser.add_argument('--n_epochs', type=int, default=125, help='number of epochs to train')
+    parser.add_argument('--n_epochs', type=int, default=150, help='number of epochs to train')
     parser.add_argument('--n_steps', type=int, default=25, help='number of epochs to update learning rate')
     parser.add_argument('--gamma', type=float, default=0.5, help='learning rate decaying factor')
     parser.add_argument("--smooth", type=float, default=0.001, help="smooth loss")
 
     parser.add_argument('--load_pretrain', type=bool, default=False)
-    parser.add_argument('--pretrainmodel_path', type=str, default='Substitude Your Path Here') # if you need to train based on pretrain model, please change the lr above as the same as the last lr when saving your pretrain model.
+    parser.add_argument('--pretrainmodel_path', type=str, default='Substitude Your Path Here') 
+    # if you need to train based on pretrain model, please change the lr above as the same as the last lr when saving your pretrain model.
 
     return parser.parse_args()
 
