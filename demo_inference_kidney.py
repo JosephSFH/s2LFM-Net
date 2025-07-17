@@ -11,13 +11,13 @@ from tifffile import imwrite
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda:0')
-    parser.add_argument("--angres", type=int, default=14, help="input angle number")
+    parser.add_argument("--angres", type=int, default=12, help="input angle number")
 
-    parser.add_argument("--out_channels", type=int, default=8, help="output spectrum channels")
+    parser.add_argument("--out_channels", type=int, default=4, help="output spectrum channels")
     parser.add_argument('--testset_dir', type=str, default='dataset/testset/kidney_slice/')
 
-    parser.add_argument("--patchsize", type=int, default=144, help="inference patches size")
-    parser.add_argument("--stride", type=int, default=72, help="stride size two inference patches")
+    parser.add_argument("--patchsize", type=int, default=180, help="inference patches size")
+    parser.add_argument("--stride", type=int, default=120, help="stride size two inference patches")
 
     parser.add_argument('--model_path', type=str, default='pretrain_model/kidney_slice/epoch_150.pth.tar')
     parser.add_argument('--save_path', type=str, default='output/kidney_slice/')
