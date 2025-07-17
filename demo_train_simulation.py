@@ -96,8 +96,7 @@ def train(cfg, train_loader, test_Names, test_loaders):
                 'loss': loss_list,
                 'optimier_state_dict': optimizer.state_dict(),
                 'schedular': scheduler},
-                save_path='model/simulation_8channels/', filename=cfg.model_name + '_' + str(cfg.angres) + 'x' + str(cfg.angres)+ 'xSR_' + str(cfg.angres) +
-                            'x' + str(cfg.angres) + '_epoch_' + str(idx_epoch + 1) + '.pth.tar')
+                save_path='pretrain_model/simulation_8channels/', filename= 'epoch_' + str(idx_epoch + 1) + '.pth.tar')
             loss_epoch = []
 
         ''' evaluation '''
