@@ -18,9 +18,11 @@ Here, we proposed a deep-learning decoder, **s²LFM-Net**, to accurately reconst
 ## Startup
 ### Download s²LFM-Net code
 Download our code using
-`cd ~
-git clone `
-or 
+```
+cd ~
+git clone https://github.com/JosephSFH/s2LFM-Net.git
+```
+or click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .Zip.
 # Demo
 
 # Results
