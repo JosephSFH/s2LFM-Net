@@ -58,11 +58,22 @@ or again, just click the **run** button with the file _demo_inference_simulation
 Now your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins>
 
 Quick and easy, isn't? ʕง•ᴥ•ʔง
+
+## Bounes
+We also provided extra demo for real scene. You can use
+```
+cd ~
+python demo_inference_kidney.py
+```
+or again again, just click the button to see the results from a 4-color human kidney slice.
+
 # Results
-Numerical simulated data was randomly synthesis with tubulins and beans in 8 channles (simulation codes are under preparation and would be provided soon). Here are the unmixing results for s²LFM-Net
+Numerical simulated data was randomly synthesis with tubulins and beans in 8 channels (simulation codes are under preparation and would be provided soon). The centerview of RGB measurements are shown on the left. The right part shows the results from **s²LFM-Net**. Scale bars, 20μm.
+![screenshot](https://github.com/user-attachments/assets/66c3f53a-5382-44ee-9002-99bb4d7cb4a2)
 
 # Citation
-
+Unavaliable now.
 # Acknowledgement
 
 # Correspondence
+Should you have any questions regarding this project and the related results, please feel free to contact [Zhi Lu](luzhi@tsinghua.edu.cn) and [Feihao Sun](sfh21@mails.tsinghua.edu.cn).
