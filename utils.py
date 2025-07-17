@@ -54,7 +54,7 @@ def MultiTestSetDataLoader(args):
 class TestSetDataLoader(Dataset):
     def __init__(self, args, data_name = 'ALL'):
         super(TestSetDataLoader, self).__init__()
-        self.angin = args.angin
+        self.angres = args.angres
         self.dataset_dir = args.testset_dir + data_name
         self.file_list = []
         tmp_list = os.listdir(self.dataset_dir)
@@ -212,3 +212,5 @@ def LFsplit(data, angRes):
 
     data_st = torch.stack(data_sv, dim=1)
     return data_st
+
+
