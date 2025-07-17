@@ -17,12 +17,14 @@ Here, we proposed a deep-learning decoder, **s²LFM-Net**, to accurately reconst
 5. see _requirements.txt_ for the version of other packages.
 ## Startup
 ### Download s²LFM-Net code
-Download our code using
+There are three options for you to download our codes:
+1. Download our code using
 ```
 cd ~
 git clone https://github.com/JosephSFH/s2LFM-Net.git
 ```
-or click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .Zip.
+2. Click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .zip.
+3. Refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for downloading.
 ### Prepare s²LFM-Net environment
 ```
 conda create -n s2lfmnet python=3.9
@@ -51,12 +53,13 @@ Now you can just using
 cd ~
 python demo_inference_simulation.py
 ```
-or again just click the **run** button with the file _demo_inference_simulation.py_ opened on your complier.
+or again, just click the **run** button with the file _demo_inference_simulation.py_ opened on your complier.
 
 Now your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins>
 
 Quick and easy, isn't? ʕง•ᴥ•ʔง
 # Results
+Numerical simulated data was randomly synthesis with tubulins and beans in 8 channles (simulation codes are under preparation and would be provided soon). Here are the unmixing results for s²LFM-Net
 
 # Citation
 
