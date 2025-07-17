@@ -44,7 +44,7 @@ python demo_train_simulation.py
 ```
 or just click the **run** button with the file _demo_train_simulation.py_ opened on your complier (recommended **Visual Studio Code**).
 
-By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/model/simulation_8channels/epoch_125.pth.tar </ins>
+By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/pretrain_model/simulation_8channels/epoch_125.pth.tar </ins>
 ## Then test and see what happens
 Now you can just using
 ```
@@ -52,6 +52,8 @@ cd ~
 python demo_inference_simulation.py
 ```
 or again just click the **run** button with the file _demo_inference_simulation.py_ opened on your complier.
+
+Now your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins>
 
 Quick and easy, isn't? ʕง•ᴥ•ʔง
 # Results
