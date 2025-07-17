@@ -23,6 +23,13 @@ cd ~
 git clone https://github.com/JosephSFH/s2LFM-Net.git
 ```
 or click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .Zip.
+### Prepare s²LFM-Net environment
+```
+conda create -n s2lfmnet python=3.9
+conda avtivate s2lfmnet
+pip install -r requirements.txt
+```
+s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successfully install both platform. You can refer to [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html) and [Pytorch](https://pytorch.org/) for guides and help.
 # Demo
 
 # Results
