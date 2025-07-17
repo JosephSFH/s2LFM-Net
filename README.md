@@ -34,7 +34,17 @@ s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successf
 ## Download pretrain model
 Pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1xuh2Tuk6kf2MCx6WWFNGJ5Ft0j_4cepn?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15860987). Please suit yourself~
 ## Download dataset
-Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for only codes and testset.
+Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can also refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for only codes and testset.
+## Train s²LFM-Net with numerical simulated data
+If you want to re-train the model, please use
+```
+cd ~
+conda activate s2lfmnet
+python demo_train_simulation.py
+```
+or just click the **run** button with the file _demo_train_simulation.py_ opened on your complier (recommended **Visual Studio Code**).
+By a single NVIDIA-3090 GPU, the model would finish training after ~9.4 hours and be save at <ins>~/model/simulation_8channels/epoch_125.pth.tar </ins>
+## Then test and see what happens
 # Results
 
 # Citation
