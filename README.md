@@ -17,7 +17,10 @@ Here, we proposed a deep-learning decoder, **s²LFM-Net**, to accurately reconst
 5. see _requirements.txt_ for the version of other packages.
 ## Startup
 ### Download s²LFM-Net code
-
+Download our code using
+`cd ~
+git clone `
+or 
 # Demo
 
 # Results
