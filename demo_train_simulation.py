@@ -12,7 +12,7 @@ def parse_args():
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda:0')
-    parser.add_argument("--angin", type=int, default=14, help="input angle number")
+    parser.add_argument("--angres", type=int, default=14, help="input angle number")
     parser.add_argument("--out_channels", type=int, default=8, help="output spectrum channels")
     parser.add_argument("--datasize", type=int, default=72, help="spatial pixel size for each angle")
 
@@ -38,15 +38,15 @@ def train(cfg, train_loader, test_Names, test_loaders):
     Main training loop for the s2LFM-Net model.
     Handles training, validation, checkpointing, and learning rate scheduling.
     """
-    net = s2lfm_Net(cfg.angin, cfg.out_channels)
+    net = s2lfm_Net(cfg.angres, cfg.out_channels)
     net.to(cfg.device)
     cudnn.benchmark = True
     epoch_state = 0
        
     # Prepare angular indices for source views
-    ind_all = np.arange(cfg.angin*cfg.angin).reshape(cfg.angin, cfg.angin)        
-    delt = (cfg.angin-1) // (cfg.angin-1)
-    ind_source = ind_all[0:cfg.angin:delt, 0:cfg.angin:delt]
+    ind_all = np.arange(cfg.angres*cfg.angres).reshape(cfg.angres, cfg.angres)        
+    delt = (cfg.angres-1) // (cfg.angres-1)
+    ind_source = ind_all[0:cfg.angres:delt, 0:cfg.angres:delt]
     ind_source = torch.from_numpy(ind_source.reshape(-1))
 
     # Load pretrained model if specified
@@ -96,8 +96,8 @@ def train(cfg, train_loader, test_Names, test_loaders):
                 'loss': loss_list,
                 'optimier_state_dict': optimizer.state_dict(),
                 'schedular': scheduler},
-                save_path='model/simulation_8channels/', filename=cfg.model_name + '_' + str(cfg.angin) + 'x' + str(cfg.angin)+ 'xSR_' + str(cfg.angin) +
-                            'x' + str(cfg.angin) + '_epoch_' + str(idx_epoch + 1) + '.pth.tar')
+                save_path='model/simulation_8channels/', filename=cfg.model_name + '_' + str(cfg.angres) + 'x' + str(cfg.angres)+ 'xSR_' + str(cfg.angres) +
+                            'x' + str(cfg.angres) + '_epoch_' + str(idx_epoch + 1) + '.pth.tar')
             loss_epoch = []
 
         ''' evaluation '''
@@ -128,8 +128,8 @@ def valid(test_loader, net, ind_source):
 
         # Prepare data for network input
         c, uh, vw = data.shape
-        h0, w0 = uh // cfg.angin, vw // cfg.angin
-        subLFin = LFdivide(data, cfg.angin, cfg.datasize, cfg.datasize)
+        h0, w0 = uh // cfg.angres, vw // cfg.angres
+        subLFin = LFdivide(data, cfg.angres, cfg.datasize, cfg.datasize)
         numU, numV, c, H, W = subLFin.shape # numU = numV = 1
         minibatch = 1
         num_inference = numU*numV//minibatch
@@ -145,13 +145,13 @@ def valid(test_loader, net, ind_source):
                 tmp = tmp_in[(idx_inference+1)*minibatch:,:,:,:]
                 out_lf.append(net(tmp.to(cfg.device)))#
         out_lf = torch.cat(out_lf, 0)
-        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angin * cfg.patchsize, cfg.angin * cfg.patchsize)
+        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angres * cfg.patchsize, cfg.angres * cfg.patchsize)
 
         # Reconstruct the full light field
-        outLF = LFintegrate(subLFout, cfg.angin, cfg.patchsize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
+        outLF = LFintegrate(subLFout, cfg.angres, cfg.patchsize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
         
-        gt = LFsplit(label, cfg.angin).squeeze().view(cfg.angin,cfg.angin,cfg.out_channels,h0,w0)
-        psnr, ssim = cal_metrics(gt, outLF, cfg.angin, ind_source)
+        gt = LFsplit(label, cfg.angres).squeeze().view(cfg.angres,cfg.angres,cfg.out_channels,h0,w0)
+        psnr, ssim = cal_metrics(gt, outLF, cfg.angres, ind_source)
 
         psnr_iter_test.append(psnr)
         ssim_iter_test.append(ssim)
