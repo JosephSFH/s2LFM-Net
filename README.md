@@ -36,15 +36,24 @@ Pretrain model can be downloaded at [Google Drive](https://drive.google.com/driv
 ## Download dataset
 Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can also refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for only codes and testset.
 ## Train s²LFM-Net with numerical simulated data
-If you want to re-train the model, please use
+If you want to re-train the model, please using
 ```
 cd ~
 conda activate s2lfmnet
 python demo_train_simulation.py
 ```
 or just click the **run** button with the file _demo_train_simulation.py_ opened on your complier (recommended **Visual Studio Code**).
-By a single NVIDIA-3090 GPU, the model would finish training after ~9.4 hours and be save at <ins>~/model/simulation_8channels/epoch_125.pth.tar </ins>
+
+By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/model/simulation_8channels/epoch_125.pth.tar </ins>
 ## Then test and see what happens
+Now you can just using
+```
+cd ~
+python demo_inference_simulation.py
+```
+or again just click the **run** button with the file _demo_inference_simulation.py_ opened on your complier.
+
+Quick and easy, isn't? ʕง•ᴥ•ʔง
 # Results
 
 # Citation
