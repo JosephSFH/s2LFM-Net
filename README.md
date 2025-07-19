@@ -28,7 +28,7 @@ git clone https://github.com/JosephSFH/s2LFM-Net.git
 ### Prepare s²LFM-Net environment
 ```
 conda create -n s2lfmnet python=3.9
-conda avtivate s2lfmnet
+conda activate s2lfmnet
 pip install -r requirements.txt
 ```
 s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successfully install both platform. You can refer to [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html) and [Pytorch](https://pytorch.org/) for guides and help.
@@ -76,4 +76,4 @@ Unavaliable now.
 # Acknowledgement
 
 # Correspondence
-Should you have any questions regarding this project and the related results, please feel free to contact [Zhi Lu](luzhi@tsinghua.edu.cn) and [Feihao Sun](sfh21@mails.tsinghua.edu.cn).
+Should you have any questions regarding this project and the related results, please feel free to contact Zhi Lu([luzhi@tsinghua.edu.cn](luzhi@tsinghua.edu.cn)) and Feihao Sun([sfh21@mails.tsinghua.edu.cn](sfh21@mails.tsinghua.edu.cn)).
