@@ -24,7 +24,7 @@ cd ~
 git clone https://github.com/JosephSFH/s2LFM-Net.git
 ```
 2. Click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .zip.
-3. Refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for downloading.
+3. Refer to [Zenodo](https://doi.org/10.5281/zenodo.15905791) for downloading.
 ### Prepare s²LFM-Net environment
 ```
 conda create -n s2lfmnet python=3.9
@@ -34,9 +34,9 @@ pip install -r requirements.txt
 s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successfully install both platform. You can refer to [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html) and [Pytorch](https://pytorch.org/) for guides and help.
 # Demo
 ## Download pretrain model
-Pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1xuh2Tuk6kf2MCx6WWFNGJ5Ft0j_4cepn?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15860987). Please suit yourself~
+Pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1xuh2Tuk6kf2MCx6WWFNGJ5Ft0j_4cepn?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15905791). Please suit yourself~
 ## Download dataset
-Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can also refer to [Zenodo](https://doi.org/10.5281/zenodo.15860987) for only codes and testset.
+Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can also refer to [Zenodo](https://doi.org/10.5281/zenodo.15905791) for only codes and testset.
 ## Train s²LFM-Net with numerical simulated data
 If you want to re-train the model, please using
 ```
