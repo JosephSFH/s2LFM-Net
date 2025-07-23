@@ -9,7 +9,7 @@ Here, we proposed a deep-learning decoder, **s²LFM-Net**, to accurately reconst
 3. ~500GB disk space
 4. Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz
 5. Windows 10 Pro
-## Basic software configuration
+## Our software configuration
 1. Python 3.9.12
 2. Pytorch 1.11.0
 3. conda 22.9.0
