@@ -37,17 +37,7 @@ s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successf
 Pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1xuh2Tuk6kf2MCx6WWFNGJ5Ft0j_4cepn?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15905791). Please suit yourself~
 ## Download dataset
 Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1qwZ-8G3QGqDtUgFMESaBcEfDcOcAPFi7?usp=sharing). Trainingset is quite large, you can also refer to [Zenodo](https://doi.org/10.5281/zenodo.15905791) for only codes and testset.
-## Train s²LFM-Net with numerical simulated data
-If you want to re-train the model, please using
-```
-cd ~
-conda activate s2lfmnet
-python demo_train_simulation.py
-```
-or just click the **run** button with the file _demo_train_simulation.py_ opened on your complier (recommended **Visual Studio Code**).
-
-By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/pretrain_model/simulation_8channels/epoch_125.pth.tar </ins>
-## Then test and see what happens
+## Run the demo
 Now you can just using
 ```
 cd ~
@@ -58,14 +48,25 @@ or again, just click the **run** button with the file _demo_inference_simulation
 Now your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins>
 
 Quick and easy, isn't? ʕง•ᴥ•ʔง
+## Train and test your own s²LFM-Net model
+If you want to re-train the model, please using
+```
+cd ~
+conda activate s2lfmnet
+python demo_train_simulation.py
+```
+or just click the **run** button with the file _demo_train_simulation.py_ opened on your complier (recommended **Visual Studio Code**).
 
+By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/YourModel/simulation_8channels/epoch_125.pth.tar </ins>
+
+Then your can modify our demo inference code with your own parameters and see what happens.
 ## Bounes
 We also provided extra demo for real scene. You can use
 ```
 cd ~
 python demo_inference_kidney.py
 ```
-or again again, just click the **run** button to see the results from a 4-color human kidney slice.
+or again again, just click the **run** button to see the results from a 4-color human kidney slice (*the data is raw data and have not been postpocessed such denoised or despeckled).
 
 # Results
 Numerical simulated data was randomly synthesis with tubulins and beans in 8 channels (simulation codes are under preparation and would be provided soon). The centerview of RGB measurements are shown on the left. The right part shows the results from **s²LFM-Net**. Scale bars, 20μm.
