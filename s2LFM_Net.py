@@ -25,7 +25,7 @@ class s2lfm_Net(nn.Module):
         self.Out = nn.Conv2d(in_channels=channel, out_channels=out_channels, kernel_size=1, stride=1, padding=0, bias=False)
         self.Angular_UpSample = Upsample(channel, angular_in)
 
-        # Ouput
+        # Residual
         self.Resup = nn.Conv2d(in_channels=3, out_channels=out_channels, kernel_size=3, padding=(3 - 1) // 2, bias=False)
 
     def forward(self, x):
