@@ -46,21 +46,6 @@ class s2lfm_Net(nn.Module):
 
         return out
 
-class Conv2d_refpad(nn.Module):
-    """
-    2D convolution with reflection padding.
-    """
-    def __init__(self, inchannel, outchannel, kernel=3):
-        super(Conv2d_refpad, self).__init__()
-        pad = kernel//2
-        self.pad = nn.ReflectionPad2d(pad)
-        self.conv = nn.Conv2d(in_channels=inchannel, out_channels=outchannel, kernel_size=kernel, padding=0, bias=False)
- 
-    def forward(self, x):
-        x = self.pad(x)
-        x = self.conv(x)
-        return x
-
 class Upsample(nn.Module):
     """
     Spatial-angular interaction module.
