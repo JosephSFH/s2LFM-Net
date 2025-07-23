@@ -3,13 +3,13 @@ High-speed multi-channel volumetric microscopy via spatial-spectral encoding(und
 # Overview
 Here, we proposed a deep-learning decoder, **s²LFM-Net**, to accurately reconstruct the 3D multi-spectral fluorescent distributions from ill-posed, RGB-encoded, light-field measurements. By jointly leveraging spatial, angular, and spectral cues, our decoder **s²LFM-Net** surpasses SOTA unmixing techniques for such ill-posed tasks in fidelity and inference speed across diverse imaging scenarios. With the help of **s²LFM-Net**, we can now reconstruct up to 8 channels information with high spectral fidelity and inference speed from light field RGB measurements. Next, we will show you the intruction of **s²LFM-Net** step by step.
 # Environments
-## Basic Hardware Configuration
+## Our hardware configuration
 1. a NVIDIA-RTX 3090 GPU or better
 2. 128G RAM
 3. ~500GB disk space
 4. Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz
 5. Windows 10 Pro
-## Basic Software Configuration
+## Basic software configuration
 1. Python 3.9.12
 2. Pytorch 1.11.0
 3. conda 22.9.0
