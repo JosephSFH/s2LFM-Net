@@ -66,7 +66,7 @@ We also provided extra demo for real scene. You can use
 cd ~
 python demo_inference_kidney.py
 ```
-or again again, just click the **run** button to see the results from a 4-color human kidney slice (*the data is raw data and have not been postpocessed such denoised or despeckled).
+or again again, just click the **run** button to see the results from a 4-color human kidney slice (*the data is raw data and have not been postpocessed such as denoised or despeckled).
 
 # Results
 Numerical simulated data was randomly synthesis with tubulins and beans in 8 channels (simulation codes are under preparation and would be provided soon). The centerview of RGB measurements are shown on the left. The right part shows the results from **s²LFM-Net**. Scale bars, 20μm.
