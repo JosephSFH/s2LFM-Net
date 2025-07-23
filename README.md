@@ -59,7 +59,7 @@ or just click the **run** button with the file _demo_train_simulation.py_ opened
 
 By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/YourModel/simulation_8channels/epoch_125.pth.tar </ins>
 
-Then your can modify our demo inference code with your own parameters and see what happens.
+Then your can use our demo inference code (modify with your own parameters if needed) and see what happens.
 ## Bounes
 We also provided extra demo for real scene. You can use
 ```
