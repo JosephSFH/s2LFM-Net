@@ -96,7 +96,7 @@ def train(cfg, train_loader, test_Names, test_loaders):
                 'loss': loss_list,
                 'optimier_state_dict': optimizer.state_dict(),
                 'schedular': scheduler},
-                save_path='model/simulation_8channels/', filename=cfg.model_name + '_' + str(cfg.angin) + 'x' + str(cfg.angin)+ 'xSR_' + str(cfg.angin) +
+                save_path='YourModel/simulation_8channels/', filename=cfg.model_name + '_' + str(cfg.angin) + 'x' + str(cfg.angin)+ 'xSR_' + str(cfg.angin) +
                             'x' + str(cfg.angin) + '_epoch_' + str(idx_epoch + 1) + '.pth.tar')
             loss_epoch = []
 
@@ -145,10 +145,10 @@ def valid(test_loader, net, ind_source):
                 tmp = tmp_in[(idx_inference+1)*minibatch:,:,:,:]
                 out_lf.append(net(tmp.to(cfg.device)))#
         out_lf = torch.cat(out_lf, 0)
-        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angin * cfg.patchsize, cfg.angin * cfg.patchsize)
+        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angin * cfg.datasize, cfg.angin * cfg.datasize)
 
         # Reconstruct the full light field
-        outLF = LFintegrate(subLFout, cfg.angin, cfg.patchsize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
+        outLF = LFintegrate(subLFout, cfg.angin, cfg.datasize, cfg.datasize, h0, w0) #[ang, ang, channel, H, W]
         
         gt = LFsplit(label, cfg.angin).squeeze().view(cfg.angin,cfg.angin,cfg.out_channels,h0,w0)
         psnr, ssim = cal_metrics(gt, outLF, cfg.angin, ind_source)
