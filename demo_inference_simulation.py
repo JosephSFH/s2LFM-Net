@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument("--patchsize", type=int, default=144, help="inference patches size")
     parser.add_argument("--stride", type=int, default=72, help="stride size two inference patches")
 
-    parser.add_argument('--model_path', type=str, default='pretrain_model/simulation_8channels/epoch_125.pth.tar')
+    parser.add_argument('--model_path', type=str, default='pretrain_model_demo/simulation_8channels/epoch_125.pth.tar')
     parser.add_argument('--save_path', type=str, default='output/simulation_8channels/')
 
     return parser.parse_args()
@@ -137,3 +137,4 @@ def main(cfg):
 if __name__ == '__main__':
     cfg = parse_args()
     main(cfg)
+
