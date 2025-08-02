@@ -36,7 +36,7 @@ s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successf
 ## Download pretrain model
 Pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1uzhmvDSUzESFG0uTNmDv3njGoF4JRsHs?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15905791). Please suit yourself~
 ## Download dataset
-Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1u-rY2btQbRUWsy6I7mF9r_Qjni_8b5W0?usp=sharing) and [Zenodo](https://doi.org/10.5281/zenodo.15905791) for trainingset and testset.
+Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1u-rY2btQbRUWsy6I7mF9r_Qjni_8b5W0?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.15905791).
 ## Run the demo
 After downloading the pretrian model and dataset, now you can just using
 ```
