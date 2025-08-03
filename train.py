@@ -17,8 +17,8 @@ def parse_args():
     parser.add_argument("--datasize", type=int, default=108, help="spatial pixel size for each angle")
 
     parser.add_argument('--model_name', type=str, default='s2LFMNet')
-    parser.add_argument('--trainset_dir', type=str, default='')
-    parser.add_argument('--testset_dir', type=str, default='')
+    parser.add_argument('--trainset_dir', type=str, default='', help='Your training set directory')
+    parser.add_argument('--testset_dir', type=str, default='', help='Your test set directory')
 
     parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--lr', type=float, default=1e-4, help='initial learning rate')
