@@ -147,7 +147,7 @@ def valid(test_loader, net, ind_source):
         subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angres * cfg.datasize, cfg.angres * cfg.datasize)
 
         # Reconstruct the full light field
-        outLF = LFintegrate(subLFout, cfg.angres, cfg.datasize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
+        outLF = LFintegrate(subLFout, cfg.angres, cfg.datasize, cfg.datasize, h0, w0) #[ang, ang, channel, H, W]
         
         gt = LFsplit(label, cfg.angres).squeeze().view(cfg.angres,cfg.angres,cfg.out_channels,h0,w0)
         psnr, ssim = cal_metrics(gt, outLF, cfg.angres, ind_source)
