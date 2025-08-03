@@ -144,10 +144,10 @@ def valid(test_loader, net, ind_source):
                 tmp = tmp_in[(idx_inference+1)*minibatch:,:,:,:]
                 out_lf.append(net(tmp.to(cfg.device)))#
         out_lf = torch.cat(out_lf, 0)
-        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angres * cfg.patchsize, cfg.angres * cfg.patchsize)
+        subLFout = out_lf.view(numU, numV, cfg.out_channels, cfg.angres * cfg.datasize, cfg.angres * cfg.datasize)
 
         # Reconstruct the full light field
-        outLF = LFintegrate(subLFout, cfg.angres, cfg.patchsize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
+        outLF = LFintegrate(subLFout, cfg.angres, cfg.datasize, cfg.stride, h0, w0) #[ang, ang, channel, H, W]
         
         gt = LFsplit(label, cfg.angres).squeeze().view(cfg.angres,cfg.angres,cfg.out_channels,h0,w0)
         psnr, ssim = cal_metrics(gt, outLF, cfg.angres, ind_source)
