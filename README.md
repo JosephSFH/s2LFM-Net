@@ -45,7 +45,7 @@ python demo_inference_simulation.py
 ```
 or again, just click the **run** button with the file _demo_inference_simulation.py_ opened on your complier (please make sure the model and data path are correct in the code).
 
-Now your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins>
+After few secs, your will see the unmixed 8 channels results waiting for your inside the folder <ins>~/output/simulation_8channels/</ins> (the first file might have longer inference time for the warmup of your GPU)
 
 Quick and easy, isn't? ʕง•ᴥ•ʔง
 ## Train and test your own s²LFM-Net model
