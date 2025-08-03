@@ -59,7 +59,7 @@ or just click the **run** button with the file _demo_train_simulation.py_ opened
 
 By a single NVIDIA-3090 GPU, the model would finish training after about 9.4 hours and be save at <ins>~/YourModel/simulation_8channels/epoch_125.pth.tar </ins>
 
-Then your can use our demo inference code (modify with your own parameters if needed) and see what happens.
+Then your can use our demo inference code (modify with your own parameters if needed) and see what happens. (We do not set the fixed seed and the model might have slight difference performance which sometimes we ingnore)
 
 # Results
 Numerical simulated data was randomly synthesis with tubulins and beans in 8 channels (simulation codes are under preparation and would be provided soon). The centerview of RGB measurements are shown on the left. The right part shows the results from **s²LFM-Net**. Scale bars, 20μm.
