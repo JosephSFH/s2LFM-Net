@@ -34,9 +34,7 @@ pip install -r requirements.txt
 s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successfully install both platform. You can refer to [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html) and [Pytorch](https://pytorch.org/) for guides and help.
 # Demo
 ## Download dataset and pretrain model
-Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1d_F0E3hpt9E1AXQKY1KJM6i3tbAPnE5Q?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.16724830).
-Demo pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1aqLNn2JEFad84wKdumPlAM-Q6Pij-Gzs?usp=drive_link) or [Zenodo](https://doi.org/10.5281/zenodo.16724830).
-Please suit yourself~
+Demo dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1hyzkbtaARdj43KZ_aFSrDbBC_T2cEH-r?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.16724830). Please suit yourself~
 
 We also provide a 32-channel hyperspectral SAI image and its tranfer matrix in <ins>~/dataset/test/simulation_32channels/</ins> for comparisons with other analytical methods demonstrated in the paper.
 ## Run the demo
