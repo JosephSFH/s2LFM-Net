@@ -37,6 +37,8 @@ s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successf
 Demo dataset and pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1hyzkbtaARdj43KZ_aFSrDbBC_T2cEH-r?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.16724830). Please suit yourself~
 
 We also provide a 32-channel hyperspectral SAI image and its tranfer matrix in <ins>~/dataset/test/simulation_32channels/</ins> for comparisons with other analytical methods demonstrated in the paper.
+
+[20260506Updates] We now provided 4-channel and 8-channel of mouse spleen experiments test cases and pretrain model with demo codes for more validations. Also, we additional provided a pretrain model fine-tuned by mixed-noise dataset for noise generalization demonstrations.
 ## Run the demo
 After downloading the pretrian model and dataset, now you can just using
 ```
