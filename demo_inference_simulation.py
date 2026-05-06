@@ -2,7 +2,7 @@ import time
 import argparse
 import torch.backends.cudnn as cudnn
 from utils import *
-from s2LFM_Net import s2lfm_Net
+from s2LFM_Net_simulation import s2lfm_Net
 import scipy.io as sio
 import time
 from tifffile import imwrite

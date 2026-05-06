@@ -4,7 +4,7 @@ from torch.autograd import Variable
 import torch.backends.cudnn as cudnn
 from tqdm import tqdm
 from utils import *
-from s2LFM_Net import s2lfm_Net
+from s2LFM_Net_simulation import s2lfm_Net
 
 def parse_args():
     """
