@@ -24,7 +24,7 @@ cd ~
 git clone https://github.com/JosephSFH/s2LFM-Net.git
 ```
 2. Click the **green** button <img width="114" height="44" alt="image" src="https://github.com/user-attachments/assets/1678941c-89cb-407e-a151-ce311bd5e25a" /> on the top right of the wedpage to download .zip.
-3. Refer to [Zenodo](https://doi.org/10.5281/zenodo.16724830) for downloading.
+3. Refer to [Zenodo](https://doi.org/10.5281/zenodo.20050557) for downloading.
 ### Prepare s²LFM-Net environment
 ```
 conda create -n s2lfmnet python=3.9
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 s²LFM-Net is built upon Anaconda and Pytorch, please make sure you can successfully install both platform. You can refer to [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html) and [Pytorch](https://pytorch.org/) for guides and help.
 # Demo
 ## Download dataset and pretrain model
-Demo dataset and pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1hyzkbtaARdj43KZ_aFSrDbBC_T2cEH-r?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.16724830). Please suit yourself~
+Demo dataset and pretrain model can be downloaded at [Google Drive](https://drive.google.com/drive/folders/1hyzkbtaARdj43KZ_aFSrDbBC_T2cEH-r?usp=sharing) or [Zenodo](https://doi.org/10.5281/zenodo.20050557). Please suit yourself~
 
 We also provide a 32-channel hyperspectral SAI image and its tranfer matrix in <ins>~/dataset/test/simulation_32channels/</ins> for comparisons with other analytical methods demonstrated in the paper.
 
